@@ -8,11 +8,19 @@
 
 <%= form_for [:admin, @category], html: {class: 'form-horizontal'} do |f| %>
 
-    <div class="form-group <%= 'has-error' if @category.errors[:name].any? %>">
-      <%= f.label :name, class: 'col-sm-2 control-label' %>
+    <div class="form-group <%= 'has-error' if @category.errors[:name_ru].any? %>">
+      <%= f.label :name_ru, class: 'col-sm-2 control-label' %>
       <div class="col-sm-10">
-        <%= f.text_field :name, class: 'form-control' %>
-        <%= render 'shared/field_errors', object: @category, field_name: :name %>
+        <%= f.text_field :name_ru, class: 'form-control' %>
+        <%= render 'shared/field_errors', object: @category, field_name: :name_ru %>
+      </div>
+    </div>
+
+    <div class="form-group <%= 'has-error' if @category.errors[:name_en].any? %>">
+      <%= f.label :name_en, class: 'col-sm-2 control-label' %>
+      <div class="col-sm-10">
+        <%= f.text_field :name_en, class: 'form-control' %>
+        <%= render 'shared/field_errors', object: @category, field_name: :name_en %>
       </div>
     </div>
 

@@ -1,10 +1,12 @@
-<h1><%= @product.title %></h1>
-<p><%= @product.description %></p>
+<h1><%= @product.title_ru %></h1>
+<h1><%= @product.title_en %></h1>
+<p><%= @product.description_ru %></p>
+<p><%= @product.description_en %></p>
 <p>
     Price: <b><%= @product.price %></b>
 </p>
 <p>
-    <b>Category: </b> <%= @product.category.name %>
+    <b>Category: </b> <%= @product.category.name_ru %>
 </p>
 <div>
     <%= link_to 'Back to list', admin_products_path %>

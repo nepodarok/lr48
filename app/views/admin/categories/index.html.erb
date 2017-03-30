@@ -8,13 +8,15 @@
 
 <table class="table table-striped">
   <tr>
-    <th>Name</th>
+    <th>Русское название</th>
+    <th>Eanglish name</th>
     <th style="width: 100px;">Actions</th>
   </tr>
 
   <% @categories.each do |category| %>
       <tr>
-        <td><%= category.name %></td>
+        <td><%= category.name_ru %></td>
+        <td><%= category.name_en %></td>
         <td>
           <%= link_to 'Delete', admin_category_path(category), method: :delete, data: {confirm: 'Are you sure?'} %>
         </td>
