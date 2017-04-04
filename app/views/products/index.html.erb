@@ -1,5 +1,10 @@
 <div class="jumbotron">
   <h1>Welcome to Shop!</h1>
+  <hr />
+  <%= link_to_unless_current "EN", locale: 'en' %>
+  <%= link_to_unless_current "RU", locale: 'ru' %>
+  <hr />
+
   <p>Here you can purchase all kinds of computer hardware for lowest prices. We sell from only trusted and large distributors,
   to fulfill all your DIY computer needs!</p>
   <p><a href="#" class="btn btn-primary btn-lg">Learn more</a></p>

@@ -1,0 +1,14 @@
+ru:
+  products: "Продукция"
+  category: "Категории"
+  view_shop: "В магазин"
+  index_title: "Админ панель"
+  admin:
+    products:
+      index:
+        title: "Заголовок на русском"
+        description: "Описание на русском"
+        image: "Изображение"
+        price: "Цена"
+        category: "Категория"
+        actions: "Действия"

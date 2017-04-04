@@ -5,15 +5,18 @@
 </div>
 
 <hr />
+<%= link_to_unless_current "EN", locale: 'en' %>
+<%= link_to_unless_current "RU", locale: 'ru' %>
+<hr />
 
 <table class="table table-striped">
   <tr>
-    <th>Image</th>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Price</th>
-    <th>Category</th>
-    <th>Actions</th>
+    <th><%= t '.image' %></th>
+    <th><%= t '.title'%></th>
+    <th><%= t '.description'%></th>
+    <th><%= t '.price' %></th>
+    <th><%= t '.category' %></th>
+    <th><%= t '.actions' %></th>
   </tr>
 
   <% @products.each do |product| %>
