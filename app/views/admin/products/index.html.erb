@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-12">
-    <h1>Products <%= link_to 'New Product', new_admin_product_path, class: 'btn btn-success' %></h1>
+    <h1><%= t '.products' %> <%= link_to I18n.t('new_product'), new_admin_product_path, class: 'btn btn-success' %></h1>
   </div>
 </div>
 
@@ -27,9 +27,9 @@
         <td><%= product.price %></td>
         <td><%= product.category.name_ru %></td>
         <td>
-          <%= link_to 'View', admin_product_path(product) %>
-          <%= link_to 'Edit', edit_admin_product_path(product) %>
-          <%= link_to 'Delete', admin_product_path(product),
+          <%= link_to I18n.t('view'), admin_product_path(product) %>
+          <%= link_to I18n.t('edit'), edit_admin_product_path(product) %>
+          <%= link_to I18n.t('delete'), admin_product_path(product),
                       method: :delete,
                       data: {confirm: 'Do you want to remove this product?'} %>
         </td>

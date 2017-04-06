@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-12">
-    <h1>New Category</h1>
+    <h1><%= t '.new_cat'%></h1>
   </div>
 </div>
 
@@ -9,7 +9,8 @@
 <%= form_for [:admin, @category], html: {class: 'form-horizontal'} do |f| %>
 
     <div class="form-group <%= 'has-error' if @category.errors[:name_ru].any? %>">
-      <%= f.label :name_ru, class: 'col-sm-2 control-label' %>
+      <%= f.label I18n.t('name_cat_' + "#{I18n.locale}"), class: 'col-sm-2 control-label' %>
+
       <div class="col-sm-10">
         <%= f.text_field :name_ru, class: 'form-control' %>
         <%= render 'shared/field_errors', object: @category, field_name: :name_ru %>
@@ -17,7 +18,7 @@
     </div>
 
     <div class="form-group <%= 'has-error' if @category.errors[:name_en].any? %>">
-      <%= f.label :name_en, class: 'col-sm-2 control-label' %>
+      <%= f.label I18n.t('name_en_cat_' + "#{I18n.locale}"), class: 'col-sm-2 control-label' %>
       <div class="col-sm-10">
         <%= f.text_field :name_en, class: 'form-control' %>
         <%= render 'shared/field_errors', object: @category, field_name: :name_en %>
@@ -26,7 +27,7 @@
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <%= f.submit class: 'btn btn-primary' %>
+        <%= f.submit I18n.t('create_cat') ,class: 'btn btn-primary' %>
       </div>
     </div>
 <% end %>

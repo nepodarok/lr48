@@ -1,8 +1,16 @@
 en:
+  name_cat_en: "Category in russian"
+  name_en_cat_en: "Category in eanglish"
   products: "Products"
+  new_product: "New Product"
   category: "Category"
+  create_cat: "Create category"
+  add_category: "New category"
   view_shop: "View shop"
   index_title: "Shop admin"
+  view: "view"
+  edit: "edit"
+  delete: "delete"
   admin:
     products:
       index:
@@ -12,3 +20,9 @@ en:
         price: "Price"
         category: "Category"
         actions: "Actions"
+        products: "Products"
+    categories:
+      index:
+        category: "Category"
+      new:
+        new_cat: "New category"

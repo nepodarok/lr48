@@ -1,0 +1,8 @@
+ru:
+  activerecord:
+    models:
+      category: Категория
+    attributes:
+      profile:
+        name_ru: "Название категории на русском"
+        name_en: "Название категории на английском"

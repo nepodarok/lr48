@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-sm-12">
-    <h1>Categories <%= link_to 'Add category', new_admin_category_path, class: 'btn btn-success' %></h1>
+    <h1><%= t '.category' %> <%= link_to I18n.t('add_category'), new_admin_category_path, class: 'btn btn-success' %></h1>
   </div>
 </div>
 
@@ -18,7 +18,7 @@
         <td><%= category.name_ru %></td>
         <td><%= category.name_en %></td>
         <td>
-          <%= link_to 'Delete', admin_category_path(category), method: :delete, data: {confirm: 'Are you sure?'} %>
+          <%= link_to I18n.t('delete'), admin_category_path(category), method: :delete, data: {confirm: 'Are you sure?'} %>
         </td>
       </tr>
   <% end %>
